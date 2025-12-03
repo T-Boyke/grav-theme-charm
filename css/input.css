@@ -1,2 +1,28 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.css";
+
+@layer components {
+    .site-header {
+        @apply w-full py-4 bg-white dark:bg-gray-800 shadow-sm dark:border-b dark:border-gray-700 transition-all duration-300;
+    }
+
+    /* Fixed Header Behavior */
+    .header-fixed .site-header {
+        @apply fixed top-0 left-0 z-50;
+    }
+
+    /* Add padding to page wrapper when header is fixed to prevent overlap */
+    .header-fixed #page-wrapper {
+        @apply pt-[4.5rem];
+    }
+
+    /* Animated Header State (Scrolled) */
+    .header-animated .site-header.scrolled {
+        @apply py-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-md;
+    }
+
+    /* Transparent Header State */
+    .header-transparent .site-header:not(.scrolled) {
+        @apply bg-transparent shadow-none border-none dark:bg-transparent;
+    }
+}
