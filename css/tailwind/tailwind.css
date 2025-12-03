@@ -35,7 +35,9 @@
 @import "./components/tabs.css";
 @import "./components/tiles.css";
 @import "./components/toasts.css";
+@import "./components/toasts.css";
 @import "./components/tooltips.css";
+@import "./components/mermaid.css";
 
 /* Utilities */
 @import "./utilities/animations.css";

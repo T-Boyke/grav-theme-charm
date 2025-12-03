@@ -1,0 +1,24 @@
+@layer components {
+    .mermaid {
+        @apply flex justify-center my-8 bg-gray-50 p-4 rounded shadow-sm overflow-x-auto dark:bg-gray-800;
+
+        /* Mermaid Base Theme Variables */
+        --mermaid-font-family: var(--font-family-sans);
+    }
+
+    /* Light Mode Variables */
+    :root {
+        --mermaid-primary-color: #eef2f5;
+        --mermaid-primary-border-color: #dbe2e8;
+        --mermaid-text-color: #3b4351;
+        --mermaid-line-color: #5755d9;
+    }
+
+    /* Dark Mode Variables */
+    .dark {
+        --mermaid-primary-color: #303742;
+        --mermaid-primary-border-color: #455060;
+        --mermaid-text-color: #cacedb;
+        --mermaid-line-color: #7b78ff;
+    }
+}
