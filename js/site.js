@@ -17,45 +17,79 @@ function parallaxBackground() {
 
 jQuery(document).ready(function ($) {
 
-    // Initialize Mermaid
+    // Store original mermaid content
+    var mermaidCache = [];
     $('.language-mermaid').each(function (index, element) {
-        var content = $(element).text();
-        var mermaidDiv = $('<div class="mermaid">' + content + '</div>');
-        $(element).parent('pre').replaceWith(mermaidDiv);
+        mermaidCache.push({
+            element: element,
+            content: $(element).text()
+        });
     });
 
-    try {
-        var isDark = $('html').hasClass('dark');
-        var themeVars = isDark ? {
-            // Dark Mode Overrides
-            primaryColor: '#1f2937', // gray-800
-            primaryTextColor: '#f3f4f6', // gray-100
-            primaryBorderColor: '#6b7280', // gray-500
-            lineColor: '#a5b4fc', // indigo-300
-            secondaryColor: '#374151', // gray-700
-            tertiaryColor: '#1f2937', // gray-800
-            noteBkgColor: '#374151',
-            noteTextColor: '#f3f4f6',
-            textColor: '#f3f4f6',
-            mainBkg: '#1f2937',
-            darkMode: true
-        } : {
-            // Light Mode Defaults
-            darkMode: false
-        };
+    var renderTimeout;
+    function renderMermaid() {
+        clearTimeout(renderTimeout);
+        renderTimeout = setTimeout(function () {
+            _renderMermaidActual();
+        }, 100);
+    }
 
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'base',
-            themeVariables: {
-                fontFamily: 'inherit',
-                ...themeVars
+    function _renderMermaidActual() {
+        var isDark = $('html').hasClass('dark');
+        console.log('Rendering Mermaid. Dark mode:', isDark);
+
+        // Reset blocks to raw state
+        mermaidCache.forEach(function (item) {
+            // Create new container with raw content
+            var mermaidDiv = $('<div class="mermaid">' + item.content + '</div>');
+
+            // Find the current instance in the DOM
+            if (document.body.contains(item.element)) {
+                $(item.element).replaceWith(mermaidDiv);
+                item.element = mermaidDiv[0];
+            } else {
+                // Try to find it by context if reference is lost (e.g. inside a container that was modified)
+                // For now, we assume the reference is valid or the element is gone.
+                // If gone, we can't do much.
             }
         });
-        console.log('Mermaid initialized with dark mode:', isDark);
-    } catch (e) {
-        console.error('Mermaid init failed:', e);
+
+        // Re-initialize configuration
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: isDark ? 'dark' : 'default',
+            securityLevel: 'loose',
+            themeVariables: isDark ? {
+                darkMode: true,
+                primaryColor: '#1f2937',
+                primaryTextColor: '#f3f4f6',
+                primaryBorderColor: '#6b7280',
+                lineColor: '#a5b4fc',
+                secondaryColor: '#374151',
+                tertiaryColor: '#1f2937',
+                noteBkgColor: '#374151',
+                noteTextColor: '#f3f4f6',
+                textColor: '#f3f4f6',
+                mainBkg: '#1f2937'
+            } : {
+                darkMode: false
+            }
+        });
+
+        // Run Mermaid on the new elements
+        var nodesToProcess = mermaidCache.map(function (item) { return item.element; }).filter(function (el) { return document.body.contains(el); });
+
+        if (nodesToProcess.length > 0) {
+            mermaid.run({
+                nodes: nodesToProcess
+            }).catch(function (e) {
+                console.error('Mermaid run failed:', e);
+            });
+        }
     }
+
+    // Initial Render
+    renderMermaid();
 
     scrollHeader();
 
@@ -125,6 +159,9 @@ jQuery(document).ready(function ($) {
                 radio.checked = true;
             }
         });
+
+        // Re-render Mermaid on theme change
+        renderMermaid();
     }
 
     // Initialize theme
@@ -150,6 +187,7 @@ jQuery(document).ready(function ($) {
             } else {
                 html.classList.remove('dark');
             }
+            renderMermaid();
         }
     });
 
