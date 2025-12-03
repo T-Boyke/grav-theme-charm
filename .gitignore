@@ -17,6 +17,7 @@ desktop.ini
 !.vscode/extensions.json
 *.code-workspace
 
+
 # JetBrains (IntelliJ, WebStorm, PyCharm etc.)
 .idea/
 *.iml
@@ -64,3 +65,6 @@ vendor/
 venv/
 .venv/
 __pycache__/
+
+# Grav spezifische Caches (zur Sicherheit, falls lokal generiert)
+cache/
