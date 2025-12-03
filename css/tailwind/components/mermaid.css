@@ -16,9 +16,28 @@
 
     /* Dark Mode Variables */
     .dark {
-        --mermaid-primary-color: #303742;
-        --mermaid-primary-border-color: #455060;
-        --mermaid-text-color: #cacedb;
-        --mermaid-line-color: #7b78ff;
+        --mermaid-primary-color: #1f2937;
+        /* gray-800 */
+        --mermaid-primary-border-color: #4b5563;
+        /* gray-600 */
+        --mermaid-text-color: #f3f4f6;
+        /* gray-100 */
+        --mermaid-line-color: #a5b4fc;
+        /* indigo-300 */
+        --mermaid-node-border: #6b7280;
+        /* gray-500 */
+        --mermaid-main-bkg: #1f2937;
+        /* gray-800 */
+        --mermaid-actor-border: #6b7280;
+        --mermaid-actor-bkg: #374151;
+        /* gray-700 */
+        --mermaid-actor-text-color: #f3f4f6;
+        --mermaid-signal-text-color: #f3f4f6;
+        --mermaid-label-text-color: #e5e7eb;
+        /* gray-200 */
+        --mermaid-loop-text-color: #f3f4f6;
+        --mermaid-note-border: #4b5563;
+        --mermaid-note-bkg: #374151;
+        --mermaid-note-text-color: #f3f4f6;
     }
 }
