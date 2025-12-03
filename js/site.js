@@ -18,11 +18,18 @@ function parallaxBackground() {
 jQuery(document).ready(function ($) {
 
     // Initialize Mermaid
+    $('.language-mermaid').each(function (index, element) {
+        var content = $(element).text();
+        var mermaidDiv = $('<div class="mermaid">' + content + '</div>');
+        $(element).parent('pre').replaceWith(mermaidDiv);
+    });
+
     mermaid.initialize({
         startOnLoad: true,
         theme: 'base',
         themeVariables: {
-            fontFamily: 'inherit'
+            fontFamily: 'inherit',
+            darkMode: $('html').hasClass('dark') // Initial check
         }
     });
 
