@@ -8,23 +8,19 @@ help: ## Zeigt diese Hilfe an
 
 .PHONY: install
 install: ## Installiert Abhängigkeiten
-	@echo "Installiere Abhängigkeiten..."
-	# Hier Befehl einfügen: z.B. npm install oder pip install -r requirements.txt
+	npm install
 
 .PHONY: dev
 dev: ## Startet den Entwicklungsserver
-	@echo "Starte App..."
-	# Hier Befehl einfügen: z.B. npm start
+	npm run dev
 
 .PHONY: test
 test: ## Führt Tests aus
-	@echo "Teste..."
-	# Hier Befehl einfügen: z.B. npm test
+	echo "No tests defined yet"
 
 .PHONY: build
 build: ## Baut die Anwendung für Produktion
-	@echo "Baue..."
-	# Hier Befehl einfügen: z.B. npm run build
+	npm run build
 
 .PHONY: clean
 clean: ## Löscht temporäre Dateien

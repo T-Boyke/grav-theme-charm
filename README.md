@@ -2,14 +2,13 @@
 
 ![](docs/assets/screenshot.png)
 
-**Grav Theme Charm** is a fork of the default [Quark](https://github.com/getgrav/grav-theme-quark) theme for [Grav CMS](http://github.com/getgrav/grav). This theme is built with the [Spectre.css](https://picturepan2.github.io/spectre/) framework and provides a powerful base for developing your own themes. Charm uses functionality that is only available in Grav 1.4+, as such you cannot run Charm on earlier versions of Grav.
+**Grav Theme Charm** is a fork of the default [Quark](https://github.com/getgrav/grav-theme-quark) theme for [Grav CMS](http://github.com/getgrav/grav). This theme has been migrated to use **Tailwind CSS v4.1.17** and **Vite**, providing a modern and highly performant development experience.
 
 ## Features
 
-- Lightweight and minimal for optimal performance
-- Spectre CSS Framework
+- **Tailwind CSS v4.1.17** Framework
+- **Vite** Build System for lightning-fast HMR and optimized builds
 - Fully responsive with full-page mobile navigation
-- SCSS based CSS source files for easy customization
 - Built-in support for on-page navigation
 - Multiple page template types
 - Fontawesome icon support
@@ -52,7 +51,6 @@ Charm comes with a few default options that can be set site-wide. These options 
 
 ```yaml
 enabled: true # Enable the theme
-production-mode: true # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
 grid-size: grid-lg # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
 header-fixed: true # Cause the header to be fixed at the top of the browser
 header-animated: true # Allows the fixed header to resize to a smaller header when scrolled
@@ -157,8 +155,7 @@ Dieses Projekt nutzt ein Makefile, um häufige Befehle zu standardisieren. Hier 
 | :------------- | :--------------------------------------- | :-------------- |
 | `make help`    | Zeigt alle verfügbaren Befehle an        | -               |
 | `make install` | Installiert alle Abhängigkeiten          | `npm install`   |
-| `make dev`     | Startet den lokalen Dev-Server           | `npm start`     |
-| `make test`    | Führt die Test-Suite aus                 | `npm test`      |
+| `make dev`     | Startet den lokalen Dev-Server           | `npm run dev`   |
 | `make build`   | Erstellt einen Production-Build          | `npm run build` |
 | `make clean`   | Löscht temporäre Ordner (dist, coverage) | `rm -rf ...`    |
 
