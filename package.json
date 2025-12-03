@@ -27,7 +27,7 @@
     "url": "https://github.com/T-Boyke/grav-theme-charm/issues"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-csscomb": "^3.0.8",
