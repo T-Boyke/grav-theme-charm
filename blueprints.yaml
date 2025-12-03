@@ -5,13 +5,13 @@ version: 1.0.0
 description: Grav Theme Charm - A fork of Quark
 icon: microchip
 author:
-  name: Semus
-  email: semus@example.com
-  url: https://github.com/semus/grav-theme-charm
-homepage: https://github.com/semus/grav-theme-charm
+  name: T-Boyke
+  email: t-boyke@example.com
+  url: https://github.com/T-Boyke/grav-theme-charm
+homepage: https://github.com/T-Boyke/grav-theme-charm
 demo: https://demo.getgrav.org/onepage-skeleton
 keywords: charm, quark, spectre, theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/semus/grav-theme-charm/issues
+bugs: https://github.com/T-Boyke/grav-theme-charm/issues
 license: MIT
 
 dependencies:

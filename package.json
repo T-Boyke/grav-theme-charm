@@ -1,13 +1,13 @@
 {
   "name": "grav-theme-charm",
   "version": "1.0.0",
-  "homepage": "https://github.com/semus/grav-theme-charm",
-  "author": "Semus <semus@example.com>",
+  "homepage": "https://github.com/T-Boyke/grav-theme-charm",
+  "author": "T-Boyke <t-boyke@example.com>",
   "description": "Grav Theme Charm: a lightweight, responsive and modern CSS framework (Forked from Quark)",
   "main": "docs/dist/spectre.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/semus/grav-theme-charm.git"
+    "url": "https://github.com/T-Boyke/grav-theme-charm.git"
   },
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,7 @@
     "charm"
   ],
   "bugs": {
-    "url": "https://github.com/semus/grav-theme-charm/issues"
+    "url": "https://github.com/T-Boyke/grav-theme-charm/issues"
   },
   "devDependencies": {
     "gulp": "^4.0.0",

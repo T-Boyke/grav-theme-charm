@@ -10,7 +10,6 @@ form:
       fields:
         content:
           fields:
-
             modular_title:
               type: spacer
               title: PLUGIN_ADMIN.MODULE_SETUP
@@ -18,8 +17,8 @@ form:
             header.onpage_menu:
               type: toggle
               style: vertical
-              label: THEME_QUARK.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU
-              help: THEME_QUARK.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU_HELP
+              label: THEME_CHARM.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU
+              help: THEME_CHARM.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU_HELP
               default: 0
               highlight: 0
               options:
@@ -29,7 +28,7 @@ form:
             header.content.items:
               type: text
               label: PLUGIN_ADMIN.ITEMS
-              default: '@self.modular'
+              default: "@self.modular"
               size: medium
 
             header.content.order.by:
