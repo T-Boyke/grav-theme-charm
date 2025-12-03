@@ -1,6 +1,6 @@
 {% import 'macros/macros.html.twig' as macros %}
 
-<ul {{ tree ? 'class="tree"' : '' }}>
+<ul class="{{ tree ? 'flex flex-col space-y-2' : 'flex space-x-4' }}">
     {{ macros.nav_loop(pages) }}
 </ul>
 

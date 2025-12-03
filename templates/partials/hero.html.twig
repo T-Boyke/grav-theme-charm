@@ -1,7 +1,7 @@
-<section id="{{ id }}" class="section modular-hero hero {{ page.header.hero_classes }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if hero_image %}style="background-image: url('{{ hero_image.url }}');"{% endif %}>
-    <div class="image-overlay"></div>
-    <section class="container {{ grid_size }}" style="text-align: {{ page.header.hero_align|default('center') }}">
+<section id="{{ id }}" class="relative py-32 bg-cover bg-center {{ page.header.hero_classes }} {{ page.header.background.parallax ? 'bg-fixed' : '' }}" {% if hero_image %}style="background-image: url('{{ hero_image.url }}');"{% endif %}>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container mx-auto px-4 relative z-10 {{ grid_size }}" style="text-align: {{ page.header.hero_align|default('center') }}">
         {{ content|raw }}
-    </section>
-    <i id="to-start" class="pulse fa fa-angle-down"></i>
+    </div>
+    <i id="to-start" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-3xl animate-bounce fa fa-angle-down cursor-pointer"></i>
 </section>

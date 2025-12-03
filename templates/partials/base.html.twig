@@ -18,10 +18,7 @@
 {% endblock head %}
 
 {% block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress) %}{% endif %}
-    {% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
-    {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+    {% do assets.addCss('theme://css-compiled/charm.css') %}
     {% do assets.addCss('theme://css/custom.css') %}
     {% do assets.addCss('theme://css/line-awesome.min.css') %}
 {% endblock %}
@@ -40,13 +37,13 @@
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
     {% block header %}
-        <section id="header" class="section">
-            <section class="container {{ grid_size }}">
-                <nav class="navbar">
-                    <section class="navbar-section logo">
+        <header id="header" class="w-full py-4 bg-white shadow-sm">
+            <div class="container mx-auto px-4 {{ grid_size }}">
+                <nav class="flex items-center justify-between">
+                    <div class="flex items-center logo">
                         {% include 'partials/logo.html.twig' %}
-                    </section>
-                    <section class="navbar-section desktop-menu">
+                    </div>
+                    <div class="hidden md:flex items-center desktop-menu">
 
                         <nav class="dropmenu animated">
                         {% block header_navigation %}
@@ -55,14 +52,14 @@
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
+                            <span class="login-status-wrapper ml-4"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
                         {% endif %}
 
-                    </section>
+                    </div>
                 </nav>
-            </section>
-        </section>
-        <div class="mobile-menu">
+            </div>
+        </header>
+        <div class="mobile-menu md:hidden fixed top-4 right-4 z-50">
             <div class="button_container" id="toggle">
                 <span class="top"></span>
                 <span class="middle"></span>
@@ -75,8 +72,8 @@
 
         <section id="start">
         {% block body %}
-            <section id="body-wrapper" class="section">
-                <section class="container {{ grid_size }}">
+            <section id="body-wrapper" class="py-8">
+                <section class="container mx-auto px-4 {{ grid_size }}">
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
@@ -93,12 +90,12 @@
     {% endblock %}
 
     {% block mobile %}
-    <div class="mobile-container">
+    <div class="mobile-container fixed inset-0 bg-white z-40 hidden">
         <div class="overlay" id="overlay">
-            <div class="mobile-logo">
+            <div class="mobile-logo p-4">
                 {% include 'partials/logo.html.twig' with {mobile: true} %}
             </div>
-            <nav class="overlay-menu">
+            <nav class="overlay-menu p-4">
                 {% include 'partials/navigation.html.twig' with {tree: true} %}
             </nav>
         </div>

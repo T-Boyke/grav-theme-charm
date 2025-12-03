@@ -145,32 +145,3 @@ form:
       help: THEME_CHARM.ADMIN.BLOG_PAGE_HELP
       size: medium
       default: "/blog"
-
-    spectre_section:
-      type: section
-      title: THEME_CHARM.ADMIN.SPECTRE_OPTIONS
-      underline: true
-
-    spectre.exp:
-      type: toggle
-      label: THEME_CHARM.ADMIN.SPECTRE_EXP
-      help: THEME_CHARM.ADMIN.SPECTRE_EXP_HELP
-      highlight: 0
-      default: 0
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-
-    spectre.icons:
-      type: toggle
-      label: THEME_CHARM.ADMIN.SPECTRE_ICONS
-      help: THEME_CHARM.ADMIN.SPECTRE_ICONS_HELP
-      highlight: 0
-      default: 0
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool

@@ -1,6 +1,7 @@
 {
   "name": "grav-theme-charm",
   "version": "1.0.0",
+  "type": "module",
   "homepage": "https://github.com/T-Boyke/grav-theme-charm",
   "author": "T-Boyke <t-boyke@example.com>",
   "description": "Grav Theme Charm: a lightweight, responsive and modern CSS framework (Forked from Quark)",
@@ -27,12 +28,9 @@
     "url": "https://github.com/T-Boyke/grav-theme-charm/issues"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-csscomb": "^3.0.8",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1"
+    "@tailwindcss/vite": "^4.0.0-alpha.17",
+    "tailwindcss": "^4.0.0-alpha.17",
+    "vite": "^5.0.0"
   },
   "browserslist": [
     "last 4 Chrome versions",
@@ -43,10 +41,8 @@
     "Explorer >= 10"
   ],
   "scripts": {
-    "dev": "gulp watch",
-    "build": "gulp build"
+    "dev": "vite",
+    "build": "vite build"
   },
-  "dependencies": {
-    "gulp-sourcemaps": "^2.6.4"
-  }
+  "dependencies": {}
 }

@@ -26,14 +26,14 @@
 
 {% block header_navigation %}
     {% if show_onpage_menu %}
-        <ul class="navigation">
+        <ul class="navigation flex justify-center space-x-4 py-4 fixed top-20 left-0 right-0 z-40 bg-white/90 shadow-md backdrop-blur-sm">
         {% for module in page.collection() if module.header.visible is not same as(false) %}
-            {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li><a class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
+            {% set current_module = (module.active or module.activeChild) ? 'text-blue-600 font-bold' : 'text-gray-700 hover:text-blue-600' %}
+            <li><a class="{{ current_module }} px-3 py-2 transition-colors" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
         {% endfor %}
         {% for mitem in site.menu %}
             <li>
-                <a {% if mitem.class %}class="{{ mitem.class }}"{% endif %} href="{{ mitem.url }}">
+                <a {% if mitem.class %}class="{{ mitem.class }} text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors"{% endif %} href="{{ mitem.url }}">
                     {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
                     {{ mitem.text }}
                 </a>

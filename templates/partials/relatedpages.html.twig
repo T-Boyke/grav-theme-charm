@@ -1,14 +1,14 @@
-<ul class="related-pages menu">
+<ul class="related-pages list-none p-0">
     {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-            <li class="menu-item">
+            <li class="mb-2 border-b border-gray-100 last:border-0 pb-2 last:pb-0">
                 {% if config.plugins.relatedpages.show_score %}
-                    <div class="menu-badge">
-                        <span class="label label-primary">{{ score }}</span>
+                    <div class="float-right ml-2">
+                        <span class="inline-block px-2 py-1 bg-blue-600 text-white text-xs rounded-full">{{ score }}</span>
                     </div>
                 {% endif %}
-                <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a>
+                <a href="{{ related.url }}" title="{{ related.title }}" class="text-gray-700 hover:text-blue-600 transition-colors">{{ related.title }}</a>
             </li>
         {% endif %}
     {% endfor %}

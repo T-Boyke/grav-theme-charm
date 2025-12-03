@@ -1,0 +1,30 @@
+<div class="search-wrapper relative">
+    <form name="search" data-simplesearch-form action="{{ base_url }}{{ config.plugins.simplesearch.route|default('/search') }}" method="get">
+        <input
+            name="query"
+            class="search-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+            type="text"
+            minlength="{{ config.get('plugins.simplesearch.min_query_length') }}"
+            placeholder="{{ 'PLUGIN_SIMPLESEARCH.SEARCH_PLACEHOLDER'|t }}"
+            value="{{ query|e }}"
+            data-search-input="{{ base_url }}{{ config.plugins.simplesearch.route_query }}"
+        />
+        {% if config.plugins.simplesearch.display_button %}
+            <button type="submit" class="search-submit absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600">
+                <i class="fa fa-search"></i>
+            </button>
+        {% endif %}
+    </form>
+</div>
+<script>
+jQuery(document).ready(function($){
+    var input = $('[data-search-input]');
+
+    input.on('keypress', function(event) {
+        if (event.which == 13 && input.val().length >= {{ config.get('plugins.simplesearch.min_query_length') }}) {
+            event.preventDefault();
+            $(this).closest('form').submit();
+        }
+    });
+});
+</script>
