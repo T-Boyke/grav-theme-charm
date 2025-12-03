@@ -28,9 +28,9 @@
     "url": "https://github.com/T-Boyke/grav-theme-charm/issues"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0-alpha.17",
-    "tailwindcss": "^4.0.0-alpha.17",
-    "vite": "^7.2.6"
+    "@tailwindcss/vite": "^4.1.17",
+    "tailwindcss": "^4.1.17",
+    "vite": "^6.0.0"
   },
   "browserslist": [
     "last 4 Chrome versions",
