@@ -2,16 +2,18 @@
 
 ![](docs/assets/screenshot.png)
 
-**Grav Theme Charm** is a fork of the default [Quark](https://github.com/getgrav/grav-theme-quark) theme for [Grav CMS](http://github.com/getgrav/grav). This theme has been migrated to use **Tailwind CSS v4.1.17** and **Vite**, providing a modern and highly performant development experience.
+**Grav Theme Charm** is a fork of the default [Quark](https://github.com/getgrav/grav-theme-quark) theme for [Grav CMS](http://github.com/getgrav/grav). This theme has been completely refactored to use **Tailwind CSS v4.0** (alpha) and **Vite**, replacing the original Spectre.css framework while maintaining the original look and feel through a comprehensive BEM-based port.
 
 ## Features
 
-- **Tailwind CSS v4.1.17** Framework
+- **Tailwind CSS v4.0** (Alpha) Framework
 - **Vite** Build System for lightning-fast HMR and optimized builds
+- **Spectre.css Port**: Full port of Spectre.css components to Tailwind CSS using BEM methodology
+- **Dark Mode**: Native Dark Mode support with system preference detection and manual toggle
+- **Fontawesome v7.1.0** icon support
 - Fully responsive with full-page mobile navigation
 - Built-in support for on-page navigation
 - Multiple page template types
-- **Fontawesome v7.1.0** icon support
 
 ### Supported Page Templates
 
