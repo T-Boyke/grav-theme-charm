@@ -1,0 +1,25 @@
+@layer components {
+    .tab {
+        @apply flex flex-wrap list-none border-b border-gray-200 m-0 mb-4 dark:border-gray-700;
+    }
+
+    .tab-item {
+        @apply mt-0;
+    }
+
+    .tab-item a {
+        @apply block px-3 py-2 border-b-2 border-transparent text-gray-600 no-underline hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400;
+    }
+
+    .tab-item.active a {
+        @apply border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400;
+    }
+
+    .tab-block {
+        @apply w-full table table-fixed;
+    }
+
+    .tab-block .tab-item {
+        @apply table-cell text-center;
+    }
+}

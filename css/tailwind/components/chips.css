@@ -1,0 +1,17 @@
+@layer components {
+    .chip {
+        @apply inline-flex items-center h-8 px-2 rounded-full bg-gray-100 text-sm text-gray-800 align-middle no-underline dark:bg-gray-700 dark:text-gray-200;
+    }
+
+    .chip.active {
+        @apply bg-blue-600 text-white;
+    }
+
+    .chip .avatar {
+        @apply -ml-2 mr-1;
+    }
+
+    .chip .btn-clear {
+        @apply ml-1 -mr-1 rounded-full hover:bg-black/10 cursor-pointer p-0.5;
+    }
+}

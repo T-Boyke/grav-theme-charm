@@ -1,0 +1,41 @@
+@layer components {
+    .modal {
+        @apply fixed inset-0 z-50 hidden items-center justify-center overflow-hidden opacity-0;
+    }
+
+    .modal.active {
+        @apply flex opacity-100;
+    }
+
+    .modal-overlay {
+        @apply absolute inset-0 bg-black/75;
+    }
+
+    .modal-container {
+        @apply relative bg-white rounded shadow-lg max-w-lg w-full max-h-[90vh] flex flex-col p-0 dark:bg-gray-800;
+    }
+
+    .modal-header {
+        @apply p-4 text-gray-800 dark:text-gray-100;
+    }
+
+    .modal-title {
+        @apply text-lg font-bold;
+    }
+
+    .modal-body {
+        @apply p-4 overflow-y-auto relative flex-1;
+    }
+
+    .modal-footer {
+        @apply p-4 pt-0 text-right;
+    }
+
+    .modal-sm .modal-container {
+        @apply max-w-sm;
+    }
+
+    .modal-lg .modal-container {
+        @apply max-w-3xl;
+    }
+}

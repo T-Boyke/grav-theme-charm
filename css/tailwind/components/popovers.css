@@ -1,0 +1,26 @@
+@layer components {
+    .popover {
+        @apply relative inline-block;
+    }
+
+    .popover-container {
+        @apply hidden absolute top-full left-1/2 -translate-x-1/2 z-20 w-[300px] p-4 bg-white border border-gray-200 rounded shadow-lg mt-2 dark:bg-gray-800 dark:border-gray-700;
+    }
+
+    .popover:hover .popover-container,
+    .popover:focus-within .popover-container {
+        @apply block;
+    }
+
+    .popover.popover-right .popover-container {
+        @apply left-full top-1/2 -translate-y-1/2 ml-2 translate-x-0;
+    }
+
+    .popover.popover-bottom .popover-container {
+        @apply top-full left-1/2 -translate-x-1/2 mt-2;
+    }
+
+    .popover.popover-left .popover-container {
+        @apply right-full top-1/2 -translate-y-1/2 mr-2 left-auto translate-x-0;
+    }
+}

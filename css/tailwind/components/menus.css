@@ -1,0 +1,23 @@
+@layer components {
+    .menu {
+        @apply list-none m-0 p-0 bg-white rounded shadow-sm dark:bg-gray-800;
+    }
+
+    .menu-item {
+        @apply relative mt-0 p-0 no-underline;
+    }
+
+    .menu-item>a {
+        @apply block rounded text-gray-700 px-2 py-1 no-underline hover:bg-gray-100 hover:text-blue-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-blue-400;
+    }
+
+    .menu-item.active>a,
+    .menu-item:focus>a,
+    .menu-item:hover>a {
+        @apply bg-gray-100 text-blue-600 dark:bg-gray-700 dark:text-blue-400;
+    }
+
+    .menu-badge {
+        @apply absolute top-1 right-0 flex items-center h-5 px-2;
+    }
+}

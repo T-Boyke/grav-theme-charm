@@ -1,0 +1,13 @@
+@layer components {
+    .nav {
+        @apply flex flex-col list-none m-0 p-0;
+    }
+
+    .nav-item a {
+        @apply block px-3 py-1 text-gray-600 hover:text-blue-600 no-underline dark:text-gray-400 dark:hover:text-blue-400;
+    }
+
+    .nav-item.active>a {
+        @apply font-bold text-blue-600 dark:text-blue-400;
+    }
+}

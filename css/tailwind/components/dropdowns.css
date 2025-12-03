@@ -1,0 +1,23 @@
+@layer components {
+    .dropdown {
+        @apply relative inline-block;
+    }
+
+    .dropdown-toggle {
+        @apply cursor-pointer;
+    }
+
+    .dropdown-menu {
+        @apply hidden absolute top-full left-0 z-20 min-w-[180px] py-2 mt-1 bg-white border border-gray-200 rounded shadow-lg dark:bg-gray-800 dark:border-gray-700;
+    }
+
+    .dropdown.active .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown:hover .dropdown-menu {
+        @apply block;
+    }
+
+    .dropdown-menu .menu-item {
+        @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-blue-400;
+    }
+}

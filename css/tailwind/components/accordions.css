@@ -1,0 +1,22 @@
+@layer components {
+    .accordion {
+        @apply mb-2;
+    }
+
+    .accordion-header {
+        @apply block p-2 bg-gray-100 cursor-pointer dark:bg-gray-700;
+    }
+
+    .accordion-body {
+        @apply hidden p-4 border border-t-0 border-gray-200 dark:border-gray-600;
+    }
+
+    /* Simple checkbox hack for accordion state */
+    input[type="checkbox"].accordion-check {
+        @apply hidden;
+    }
+
+    input[type="checkbox"].accordion-check:checked~.accordion-body {
+        @apply block;
+    }
+}

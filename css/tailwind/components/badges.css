@@ -1,0 +1,13 @@
+@layer components {
+    .badge {
+        @apply relative whitespace-nowrap;
+    }
+
+    .badge[data-badge]::after {
+        @apply content-[attr(data-badge)] absolute -top-2 -right-2 inline-block bg-blue-600 text-white rounded-full text-[0.6rem] px-1.5 py-0.5 transform translate-x-1/2 -translate-y-1/2 shadow-sm;
+    }
+
+    .badge.btn::after {
+        @apply top-0 right-0 transform translate-x-1/2 -translate-y-1/2;
+    }
+}

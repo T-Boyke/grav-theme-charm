@@ -1,0 +1,25 @@
+@layer components {
+    .avatar {
+        @apply inline-block relative w-8 h-8 rounded-full bg-gray-300 align-middle text-center leading-8 font-light text-white overflow-hidden;
+    }
+
+    .avatar-sm {
+        @apply w-6 h-6 text-xs leading-6;
+    }
+
+    .avatar-lg {
+        @apply w-12 h-12 text-lg leading-10;
+    }
+
+    .avatar-xl {
+        @apply w-16 h-16 text-xl leading-10;
+    }
+
+    .avatar img {
+        @apply w-full h-full object-cover;
+    }
+
+    .avatar-icon {
+        @apply absolute bottom-0 right-0 w-1/2 h-1/2 bg-white rounded-full p-0.5;
+    }
+}

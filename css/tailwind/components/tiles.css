@@ -1,0 +1,22 @@
+@layer components {
+    .tile {
+        @apply flex items-center content-start;
+    }
+
+    .tile-icon,
+    .tile-action {
+        @apply flex-none;
+    }
+
+    .tile-content {
+        @apply flex-1 px-2;
+    }
+
+    .tile-title {
+        @apply font-bold block text-gray-800 dark:text-gray-100;
+    }
+
+    .tile-subtitle {
+        @apply block text-sm text-gray-500 dark:text-gray-400;
+    }
+}

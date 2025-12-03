@@ -1,0 +1,13 @@
+@layer components {
+    .bar {
+        @apply bg-gray-100 rounded h-2 w-full flex overflow-hidden dark:bg-gray-700;
+    }
+
+    .bar-item {
+        @apply bg-blue-600 h-full block flex-shrink-0 transition-all duration-300;
+    }
+
+    .bar-sm {
+        @apply h-1;
+    }
+}

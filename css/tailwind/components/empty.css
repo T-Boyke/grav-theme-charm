@@ -1,0 +1,21 @@
+@layer components {
+    .empty {
+        @apply bg-gray-50 rounded p-16 text-center dark:bg-gray-800;
+    }
+
+    .empty-icon {
+        @apply text-4xl mb-4 text-gray-400;
+    }
+
+    .empty-title {
+        @apply text-lg font-bold my-2 text-gray-800 dark:text-gray-100;
+    }
+
+    .empty-subtitle {
+        @apply text-gray-500 my-2 dark:text-gray-400;
+    }
+
+    .empty-action {
+        @apply mt-4;
+    }
+}

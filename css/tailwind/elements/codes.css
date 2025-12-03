@@ -1,0 +1,13 @@
+@layer components {
+    code {
+        @apply font-mono text-sm bg-gray-100 text-red-500 px-1 py-0.5 rounded dark:bg-gray-700 dark:text-red-400;
+    }
+
+    pre {
+        @apply block p-4 bg-gray-100 rounded overflow-x-auto dark:bg-gray-800;
+    }
+
+    pre code {
+        @apply bg-transparent p-0 text-gray-800 dark:text-gray-200;
+    }
+}

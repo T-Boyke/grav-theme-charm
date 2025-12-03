@@ -1,0 +1,21 @@
+@layer components {
+    .navbar {
+        @apply flex items-center justify-between flex-wrap bg-white p-4 dark:bg-gray-800;
+    }
+
+    .navbar-section {
+        @apply flex items-center flex-1;
+    }
+
+    .navbar-center {
+        @apply flex items-center justify-center flex-1;
+    }
+
+    .navbar-brand {
+        @apply text-xl font-bold mr-4 text-gray-800 dark:text-white;
+    }
+
+    .navbar-item {
+        @apply mx-2;
+    }
+}

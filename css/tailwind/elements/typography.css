@@ -1,0 +1,48 @@
+@layer components {
+
+    /* Headings */
+    h1,
+    .h1 {
+        @apply text-4xl font-bold mb-4;
+    }
+
+    h2,
+    .h2 {
+        @apply text-3xl font-bold mb-3;
+    }
+
+    h3,
+    .h3 {
+        @apply text-2xl font-bold mb-3;
+    }
+
+    h4,
+    .h4 {
+        @apply text-xl font-bold mb-2;
+    }
+
+    h5,
+    .h5 {
+        @apply text-lg font-bold mb-2;
+    }
+
+    h6,
+    .h6 {
+        @apply text-base font-bold mb-2;
+    }
+
+    /* Paragraphs */
+    p {
+        @apply mb-4 leading-relaxed;
+    }
+
+    /* Blockquotes */
+    blockquote {
+        @apply border-l-4 border-gray-300 pl-4 py-2 mb-4 text-gray-600 dark:border-gray-600 dark:text-gray-400;
+    }
+
+    /* Links */
+    a {
+        @apply text-blue-600 hover:underline dark:text-blue-400;
+    }
+}

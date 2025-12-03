@@ -1,0 +1,17 @@
+@layer components {
+    .hero {
+        @apply flex flex-col justify-between pt-16 pb-16 bg-gray-50 dark:bg-gray-800;
+    }
+
+    .hero.hero-sm {
+        @apply pt-8 pb-8;
+    }
+
+    .hero.hero-lg {
+        @apply pt-32 pb-32;
+    }
+
+    .hero-body {
+        @apply w-full px-4;
+    }
+}

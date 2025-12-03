@@ -1,0 +1,32 @@
+@layer components {
+    .img-responsive {
+        @apply max-w-full h-auto;
+    }
+
+    .img-fit-cover {
+        @apply object-cover;
+    }
+
+    .img-fit-contain {
+        @apply object-contain;
+    }
+
+    .video-responsive {
+        @apply relative w-full overflow-hidden pt-[56.25%];
+        /* 16:9 Aspect Ratio */
+    }
+
+    .video-responsive iframe,
+    .video-responsive object,
+    .video-responsive embed {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .figure {
+        @apply m-0 mb-4;
+    }
+
+    .figure-caption {
+        @apply text-sm text-gray-500 mt-2 dark:text-gray-400;
+    }
+}
