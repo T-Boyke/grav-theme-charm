@@ -1,0 +1,36 @@
+@layer components {
+    .progress {
+        @apply appearance-none w-full h-1 bg-gray-100 rounded relative overflow-hidden dark:bg-gray-700;
+    }
+
+    .progress::-webkit-progress-bar {
+        @apply bg-transparent rounded;
+    }
+
+    .progress::-webkit-progress-value {
+        @apply bg-blue-600 rounded;
+    }
+
+    .progress::-moz-progress-bar {
+        @apply bg-blue-600 rounded;
+    }
+
+    .progress:indeterminate {
+        @apply bg-gray-100 dark:bg-gray-700;
+        animation: progress-indeterminate 1.5s infinite linear;
+    }
+
+    .progress:indeterminate::-moz-progress-bar {
+        @apply bg-transparent;
+    }
+
+    @keyframes progress-indeterminate {
+        0% {
+            background-position: 200% 0;
+        }
+
+        100% {
+            background-position: -200% 0;
+        }
+    }
+}

@@ -1,6 +1,11 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./tailwind/tailwind.css";
+@import "./theme/typography.css";
+@import "./theme/header.css";
+@import "./theme/footer.css";
+@import "./theme/mobile.css";
 
 @layer components {
     .site-header {

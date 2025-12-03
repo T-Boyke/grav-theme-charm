@@ -1,0 +1,38 @@
+@layer components {
+    .comparison-slider {
+        @apply relative w-full h-auto overflow-hidden rounded;
+    }
+
+    .comparison-slider .comparison-before,
+    .comparison-slider .comparison-after {
+        @apply w-full h-full top-0 left-0 m-0;
+    }
+
+    .comparison-slider .comparison-before {
+        @apply absolute z-10 overflow-hidden w-1/2 min-w-0 max-w-full resize-x;
+    }
+
+    .comparison-slider .comparison-after {
+        @apply relative;
+    }
+
+    .comparison-slider .comparison-resizer {
+        @apply absolute top-1/2 right-0 w-8 h-8 -mt-4 -mr-4 rounded-full bg-white text-gray-500 cursor-ew-resize shadow flex items-center justify-center opacity-0 transition-opacity duration-200 z-20;
+    }
+
+    .comparison-slider:hover .comparison-resizer {
+        @apply opacity-100;
+    }
+
+    .comparison-slider .comparison-label {
+        @apply absolute bottom-4 select-none px-2 py-1 bg-black/50 text-white text-xs rounded;
+    }
+
+    .comparison-slider .comparison-label.left {
+        @apply left-4;
+    }
+
+    .comparison-slider .comparison-label.right {
+        @apply right-4;
+    }
+}

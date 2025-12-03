@@ -1,0 +1,77 @@
+@layer components {
+    #header {
+        @apply w-full h-16 border-b border-gray-200 transition-all duration-300 text-xs font-bold bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700;
+    }
+
+    #header a {
+        @apply text-gray-800 dark:text-gray-100;
+    }
+
+    #header .logo svg path {
+        @apply fill-gray-800 dark:fill-gray-100;
+    }
+
+    /* Dark Header Variant */
+    .header-dark #header:not(.scrolled) {
+        @apply bg-gray-800 text-white dark:bg-black;
+    }
+
+    .header-dark #header:not(.scrolled) a {
+        @apply text-white/70;
+    }
+
+    .header-dark #header:not(.scrolled) a.active {
+        @apply text-white;
+    }
+
+    .header-dark #header:not(.scrolled) .logo svg path {
+        @apply fill-white;
+    }
+
+    /* Transparent Header Variant */
+    .header-transparent #header:not(.scrolled) {
+        @apply bg-white/5 border-none dark:bg-black/5;
+    }
+
+    .header-dark.header-transparent #header:not(.scrolled) {
+        @apply bg-black/5;
+    }
+
+    /* Navbar Section */
+    #header .navbar-section {
+        @apply h-16 transition-all duration-300 md:mr-8;
+    }
+
+    #header .navbar-section.desktop-menu {
+        @apply hidden md:block;
+    }
+
+    #header .logo svg,
+    #header .logo img {
+        @apply h-[42px] block transition-all duration-300;
+    }
+
+    /* Fixed Header */
+    .header-fixed #header {
+        @apply fixed top-0 z-20;
+    }
+
+    /* Animate Fixed Header */
+    body.header-fixed.header-animated #header.scrolled {
+        @apply h-10;
+    }
+
+    body.header-fixed.header-animated #header.scrolled .navbar-section {
+        @apply h-10;
+    }
+
+    body.header-fixed.header-animated #header.scrolled .logo svg,
+    body.header-fixed.header-animated #header.scrolled .logo img {
+        @apply h-7;
+    }
+
+    /* Login Status */
+    .login-status-wrapper {
+        @apply whitespace-nowrap;
+    }
+}

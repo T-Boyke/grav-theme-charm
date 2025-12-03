@@ -1,0 +1,159 @@
+@layer components {
+
+    /* Fluid Type */
+    html {
+        @apply text-base;
+        /* Simplified for now, fluid type needs complex calc or plugin */
+    }
+
+    /* Header Overrides */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply mt-8 font-bold text-gray-800 dark:text-gray-100;
+        font-family: var(--font-family-sans);
+        /* Assuming variable exists or default */
+    }
+
+    h1,
+    .h1 {
+        @apply text-5xl;
+    }
+
+    h2,
+    .h2 {
+        @apply text-3xl;
+    }
+
+    h6,
+    .h6 {
+        @apply font-normal;
+    }
+
+    .title-center h1,
+    .title-center h2 {
+        @apply text-center;
+    }
+
+    .title-h1h2 h1 {
+        @apply font-thin mb-0 leading-tight;
+    }
+
+    .title-h1h2 h1 strong,
+    .title-h1h2 h1 bold {
+        @apply font-normal;
+    }
+
+    .title-h1h2 h1+h2 {
+        @apply leading-tight mt-0;
+    }
+
+    /* Typography Hints */
+    .title-h1h2 h1+h2,
+    .title-center h1+h2 {
+        @apply mb-12 font-bold;
+    }
+
+    a:focus {
+        @apply outline-none shadow-none;
+    }
+
+    img {
+        @apply max-w-full;
+    }
+
+    /* Tables */
+    .table>table {
+        @apply w-full border-collapse border-spacing-0;
+    }
+
+    /* Codeblocks */
+    pre code,
+    pre.xdebug-var-dump {
+        @apply block p-4 leading-relaxed text-inherit rounded-sm overflow-x-auto bg-gray-50 dark:bg-gray-800;
+    }
+
+    pre[class*="language-"] code {
+        @apply rounded-none p-0 overflow-x-visible;
+    }
+
+    pre code:not(.hljs):not([class*="language-"]) {
+        @apply bg-gray-50 dark:bg-gray-800;
+    }
+
+    /* Font Weights */
+    b,
+    strong,
+    .heavy {
+        @apply font-bold;
+    }
+
+    .light {
+        @apply font-light;
+    }
+
+    /* Colors */
+    .text-light {
+        @apply text-white/80;
+    }
+
+    .text-light h1,
+    .text-light h2,
+    .text-light h3,
+    .text-light h4,
+    .text-light h5,
+    .text-light h6 {
+        @apply text-white/90;
+    }
+
+    /* Error configuration */
+    #error {
+        @apply text-center relative mt-20;
+    }
+
+    #error .icon {
+        @apply text-5xl;
+    }
+
+    /* Messages */
+    #messages {
+        @apply mb-4;
+    }
+
+    #messages .icon {
+        @apply text-base;
+    }
+
+    /* Lists */
+    ul,
+    ol {
+        @apply ml-8;
+    }
+
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        @apply ml-8;
+    }
+
+    ul {
+        @apply list-disc list-outside;
+    }
+
+    ol {
+        @apply list-decimal list-outside;
+    }
+
+    /* Notices */
+    .notices {
+        @apply my-6;
+    }
+
+    .notices p {
+        @apply my-4;
+    }
+}

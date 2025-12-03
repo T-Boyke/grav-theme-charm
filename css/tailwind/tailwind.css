@@ -40,3 +40,23 @@
 /* Utilities */
 @import "./utilities/animations.css";
 @import "./utilities/utilities.css";
+
+/* Experimentals */
+@import "./experimentals/autocomplete.css";
+@import "./experimentals/calendars.css";
+@import "./experimentals/carousels.css";
+@import "./experimentals/comparison-sliders.css";
+@import "./experimentals/filters.css";
+@import "./experimentals/meters.css";
+@import "./experimentals/off-canvas.css";
+@import "./experimentals/parallax.css";
+@import "./experimentals/progress.css";
+@import "./experimentals/sliders.css";
+@import "./experimentals/timelines.css";
+@import "./experimentals/viewer-360.css";
+
+/* Icons */
+@import "./icons/icons-core.css";
+@import "./icons/icons-navigation.css";
+@import "./icons/icons-action.css";
+@import "./icons/icons-object.css";

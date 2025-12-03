@@ -1,0 +1,15 @@
+@layer components {
+
+    /* Sticky Footer */
+    body.sticky-footer {
+        @apply h-full min-h-screen flex flex-col;
+    }
+
+    body.sticky-footer #page-wrapper {
+        @apply flex-auto;
+    }
+
+    #footer {
+        @apply text-gray-400 pt-4 px-4 pb-0 text-center dark:text-gray-500;
+    }
+}

@@ -1,0 +1,25 @@
+@layer components {
+    .meter {
+        @apply appearance-none w-full h-4 bg-gray-100 rounded block dark:bg-gray-700;
+    }
+
+    .meter::-webkit-meter-bar {
+        @apply bg-gray-100 rounded border-none dark:bg-gray-700;
+    }
+
+    .meter::-webkit-meter-optimum-value {
+        @apply bg-green-500 rounded;
+    }
+
+    .meter::-webkit-meter-suboptimum-value {
+        @apply bg-yellow-500 rounded;
+    }
+
+    .meter::-webkit-meter-even-less-good-value {
+        @apply bg-red-500 rounded;
+    }
+
+    .meter::-moz-meter-bar {
+        @apply bg-green-500 rounded;
+    }
+}

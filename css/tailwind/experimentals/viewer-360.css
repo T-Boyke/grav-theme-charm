@@ -1,0 +1,16 @@
+@layer components {
+    .viewer-360 {
+        @apply flex flex-col items-center;
+    }
+
+    .viewer-360 .viewer-slider {
+        @apply w-64 h-64 bg-center bg-no-repeat bg-contain cursor-ew-resize;
+    }
+
+    /* This component heavily relies on JS and specific background image sprites in Spectre */
+    /* Providing basic structure */
+
+    .viewer-360 .viewer-slider[max="36"] {
+        /* Example for 36 frames */
+    }
+}

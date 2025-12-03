@@ -1,0 +1,25 @@
+@layer components {
+    .timeline {
+        @apply list-none m-0 p-0;
+    }
+
+    .timeline .timeline-item {
+        @apply relative mb-6 pl-10;
+    }
+
+    .timeline .timeline-item::before {
+        @apply content-[''] absolute top-0 left-4 h-full w-0.5 bg-gray-200 dark:bg-gray-700;
+    }
+
+    .timeline .timeline-icon {
+        @apply absolute top-1 left-2 w-4 h-4 rounded-full bg-white border-2 border-blue-600 z-10 dark:bg-gray-800 dark:border-blue-500;
+    }
+
+    .timeline .timeline-content {
+        @apply p-4 bg-gray-50 rounded shadow-sm dark:bg-gray-800;
+    }
+
+    .timeline .timeline-item:last-child::before {
+        @apply hidden;
+    }
+}

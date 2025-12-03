@@ -1,0 +1,29 @@
+@layer components {
+    .off-canvas {
+        @apply flex flex-nowrap h-full w-full fixed top-0 left-0 z-40;
+    }
+
+    .off-canvas .off-canvas-toggle {
+        @apply block absolute top-2 left-2 z-50 p-2;
+    }
+
+    .off-canvas .off-canvas-sidebar {
+        @apply w-64 bg-gray-50 h-full fixed top-0 left-0 transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto dark:bg-gray-800;
+    }
+
+    .off-canvas .off-canvas-content {
+        @apply flex-1 h-full px-4 pt-12 overflow-y-auto;
+    }
+
+    .off-canvas .off-canvas-overlay {
+        @apply fixed inset-0 bg-black/10 hidden z-40;
+    }
+
+    .off-canvas.active .off-canvas-sidebar {
+        @apply translate-x-0;
+    }
+
+    .off-canvas.active .off-canvas-overlay {
+        @apply block;
+    }
+}

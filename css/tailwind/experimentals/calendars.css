@@ -1,0 +1,44 @@
+@layer components {
+    .calendar {
+        @apply border border-gray-200 rounded min-w-[280px] bg-white dark:bg-gray-800 dark:border-gray-700;
+    }
+
+    .calendar .calendar-nav {
+        @apply flex items-center justify-between p-2 text-lg bg-gray-50 rounded-t dark:bg-gray-700;
+    }
+
+    .calendar .calendar-header,
+    .calendar .calendar-body {
+        @apply flex flex-wrap justify-center p-0 list-none m-0;
+    }
+
+    .calendar .calendar-header .calendar-date,
+    .calendar .calendar-body .calendar-date {
+        @apply flex-none w-[14.28%] max-w-[14.28%];
+    }
+
+    .calendar .calendar-header {
+        @apply bg-gray-50 border-b border-gray-200 text-gray-500 text-center dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400;
+    }
+
+    .calendar .calendar-body .calendar-date {
+        @apply border-t border-gray-100 p-1 dark:border-gray-700;
+    }
+
+    .calendar .calendar-body .calendar-date .date-item {
+        @apply block relative w-8 h-8 leading-8 text-center rounded-full mx-auto text-gray-700 cursor-pointer transition-colors duration-200 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-blue-400;
+    }
+
+    .calendar .calendar-body .calendar-date .date-item.date-today {
+        @apply text-blue-600 border border-blue-200 dark:text-blue-400 dark:border-blue-800;
+    }
+
+    .calendar .calendar-body .calendar-date .date-item.active {
+        @apply bg-blue-600 text-white;
+    }
+
+    .calendar .calendar-body .calendar-date.prev-month .date-item,
+    .calendar .calendar-body .calendar-date.next-month .date-item {
+        @apply text-gray-400 opacity-50 dark:text-gray-600;
+    }
+}

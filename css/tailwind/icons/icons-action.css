@@ -1,0 +1,33 @@
+@layer components {
+
+    /* Close/Cross Icon */
+    .icon-cross {
+        @apply w-[1em] h-[1em];
+    }
+
+    .icon-cross::before {
+        @apply w-full h-[0.1em] bg-current transform rotate-45 top-[0.45em];
+    }
+
+    .icon-cross::after {
+        @apply w-full h-[0.1em] bg-current transform -rotate-45 top-[0.45em];
+    }
+
+    /* Plus/Minus Icons */
+    .icon-plus,
+    .icon-minus {
+        @apply w-[1em] h-[1em];
+    }
+
+    .icon-minus::before {
+        @apply w-full h-[0.1em] bg-current top-[0.45em];
+    }
+
+    .icon-plus::before {
+        @apply w-full h-[0.1em] bg-current top-[0.45em];
+    }
+
+    .icon-plus::after {
+        @apply h-full w-[0.1em] bg-current left-[0.45em];
+    }
+}

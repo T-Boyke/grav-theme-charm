@@ -1,0 +1,39 @@
+@layer components {
+
+    /* Arrow Icons */
+    .icon-arrow-down,
+    .icon-arrow-left,
+    .icon-arrow-right,
+    .icon-arrow-up {
+        @apply border border-current border-t-0 border-r-0 transform rotate-[-45deg] w-[0.6em] h-[0.6em] mt-[-0.2em];
+    }
+
+    .icon-arrow-down {
+        @apply transform rotate-[-45deg];
+    }
+
+    .icon-arrow-left {
+        @apply transform rotate-[45deg];
+    }
+
+    .icon-arrow-right {
+        @apply transform rotate-[-135deg];
+    }
+
+    .icon-arrow-up {
+        @apply transform rotate-[135deg];
+    }
+
+    /* Menu Icon */
+    .icon-menu {
+        @apply w-[1em] h-[0.1em] bg-current top-[0.45em] left-0;
+    }
+
+    .icon-menu::before {
+        @apply w-[1em] h-[0.1em] bg-current top-[-0.3em] left-0;
+    }
+
+    .icon-menu::after {
+        @apply w-[1em] h-[0.1em] bg-current top-[0.3em] left-0;
+    }
+}

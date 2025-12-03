@@ -1,0 +1,45 @@
+@layer components {
+    .parallax {
+        @apply w-full h-auto relative overflow-hidden;
+    }
+
+    .parallax .parallax-content {
+        @apply w-full h-auto shadow-lg rounded transition-transform duration-300 ease-out;
+    }
+
+    .parallax .parallax-front {
+        @apply absolute top-0 left-0 z-10 transition-transform duration-300 ease-out;
+    }
+
+    .parallax .parallax-top-left {
+        @apply absolute top-0 left-0 w-1/2 h-1/2 z-50 outline-none;
+    }
+
+    .parallax .parallax-top-right {
+        @apply absolute top-0 right-0 w-1/2 h-1/2 z-50 outline-none;
+    }
+
+    .parallax .parallax-bottom-left {
+        @apply absolute bottom-0 left-0 w-1/2 h-1/2 z-50 outline-none;
+    }
+
+    .parallax .parallax-bottom-right {
+        @apply absolute bottom-0 right-0 w-1/2 h-1/2 z-50 outline-none;
+    }
+
+    .parallax .parallax-top-left:hover~.parallax-content {
+        @apply transform rotate-x-2 -rotate-y-2;
+    }
+
+    .parallax .parallax-top-right:hover~.parallax-content {
+        @apply transform rotate-x-2 rotate-y-2;
+    }
+
+    .parallax .parallax-bottom-left:hover~.parallax-content {
+        @apply transform -rotate-x-2 -rotate-y-2;
+    }
+
+    .parallax .parallax-bottom-right:hover~.parallax-content {
+        @apply transform -rotate-x-2 rotate-y-2;
+    }
+}

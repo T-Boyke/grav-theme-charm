@@ -1,0 +1,21 @@
+@layer components {
+    .form-autocomplete {
+        @apply relative;
+    }
+
+    .form-autocomplete .form-autocomplete-input {
+        @apply flex flex-wrap list-none m-0 p-1 border border-gray-300 rounded bg-white min-h-[2rem] dark:bg-gray-800 dark:border-gray-700;
+    }
+
+    .form-autocomplete .form-autocomplete-input.is-focused {
+        @apply border-blue-500 shadow-sm ring-1 ring-blue-500;
+    }
+
+    .form-autocomplete .form-autocomplete-input .form-input {
+        @apply border-none shadow-none bg-transparent flex-1 min-w-[100px] m-0 p-1 h-6 focus:ring-0;
+    }
+
+    .form-autocomplete .menu {
+        @apply absolute top-full left-0 w-full z-50;
+    }
+}

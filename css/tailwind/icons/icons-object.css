@@ -1,0 +1,11 @@
+@layer components {
+
+    /* Search Icon */
+    .icon-search {
+        @apply w-[0.8em] h-[0.8em] border-[0.1em] border-current rounded-full left-[-0.1em] top-[-0.1em];
+    }
+
+    .icon-search::before {
+        @apply w-[0.1em] h-[0.4em] bg-current transform rotate-[-45deg] top-[0.65em] left-[0.8em];
+    }
+}

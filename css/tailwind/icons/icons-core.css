@@ -1,0 +1,25 @@
+@layer components {
+    .icon {
+        @apply inline-block w-[1em] h-[1em] align-middle text-current box-border;
+        font-style: normal;
+        text-indent: -9999px;
+        position: relative;
+    }
+
+    .icon::before,
+    .icon::after {
+        @apply block absolute content-[''] box-border;
+    }
+
+    .icon-2x {
+        @apply text-2xl;
+    }
+
+    .icon-3x {
+        @apply text-3xl;
+    }
+
+    .icon-4x {
+        @apply text-4xl;
+    }
+}

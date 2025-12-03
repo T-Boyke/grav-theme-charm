@@ -1,0 +1,21 @@
+@layer components {
+    .filter {
+        @apply list-none m-0 p-0;
+    }
+
+    .filter .filter-tag {
+        @apply inline-block rounded-full bg-gray-100 px-2 py-1 text-xs font-bold text-gray-800 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-200;
+    }
+
+    .filter .filter-nav {
+        @apply my-2;
+    }
+
+    .filter .filter-body {
+        @apply flex flex-wrap -mx-2;
+    }
+
+    .filter .filter-item {
+        @apply w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4;
+    }
+}
