@@ -1,5 +1,5 @@
 # Variablen
-APP_NAME = mein-projekt
+APP_NAME = grav-theme-charm
 
 # Standard-Ziel
 .PHONY: help

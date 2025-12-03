@@ -1,13 +1,13 @@
 {
-  "name": "spectre.css",
-  "version": "0.5.1",
-  "homepage": "http://picturepan2.github.io/spectre",
-  "author": "Yan Zhu <picturepan2@hotmail.com>",
-  "description": "Spectre.css: a lightweight, responsive and modern CSS framework",
+  "name": "grav-theme-charm",
+  "version": "1.0.0",
+  "homepage": "https://github.com/semus/grav-theme-charm",
+  "author": "Semus <semus@example.com>",
+  "description": "Grav Theme Charm: a lightweight, responsive and modern CSS framework (Forked from Quark)",
   "main": "docs/dist/spectre.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/picturepan2/spectre.git"
+    "url": "https://github.com/semus/grav-theme-charm.git"
   },
   "license": "MIT",
   "keywords": [
@@ -18,10 +18,13 @@
     "mobile-friendly",
     "front-end",
     "sass",
-    "modern"
+    "modern",
+    "grav",
+    "theme",
+    "charm"
   ],
   "bugs": {
-    "url": "https://github.com/picturepan2/spectre/issues"
+    "url": "https://github.com/semus/grav-theme-charm/issues"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
