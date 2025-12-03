@@ -51,6 +51,7 @@ Charm comes with a few default options that can be set site-wide. These options 
 
 ```yaml
 enabled: true # Enable the theme
+production-mode: true # Enable production mode
 grid-size: grid-lg # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
 header-fixed: true # Cause the header to be fixed at the top of the browser
 header-animated: true # Allows the fixed header to resize to a smaller header when scrolled
@@ -147,40 +148,40 @@ The text box provides a single option to control if any image found in the page 
 image_align: right
 ```
 
-### 💻 Entwicklung & Commands
+### 💻 Development & Commands
 
-Dieses Projekt nutzt ein Makefile, um häufige Befehle zu standardisieren. Hier sind die wichtigsten Commands:
+This project uses a Makefile to standardize common commands. Here are the most important ones:
 
-| Befehl         | Beschreibung                             | Äquivalent      |
-| :------------- | :--------------------------------------- | :-------------- |
-| `make help`    | Zeigt alle verfügbaren Befehle an        | -               |
-| `make install` | Installiert alle Abhängigkeiten          | `npm install`   |
-| `make dev`     | Startet den lokalen Dev-Server           | `npm run dev`   |
-| `make build`   | Erstellt einen Production-Build          | `npm run build` |
-| `make clean`   | Löscht temporäre Ordner (dist, coverage) | `rm -rf ...`    |
+| Command        | Description                                | Equivalent      |
+| :------------- | :----------------------------------------- | :-------------- |
+| `make help`    | Shows all available commands               | -               |
+| `make install` | Installs all dependencies                  | `npm install`   |
+| `make dev`     | Starts the local dev server                | `npm run dev`   |
+| `make build`   | Creates a production build                 | `npm run build` |
+| `make clean`   | Deletes temporary folders (dist, coverage) | `rm -rf ...`    |
 
-### 🤝 Mitwirken
+### 🤝 Contributing
 
-Beiträge sind das Herz der Open-Source-Community. Wir freuen uns über jeden Pull Request!
+Contributions are the heart of the open-source community. We welcome every Pull Request!
 
-Bitte lies unsere CONTRIBUTING.md für Details zu unserem Code of Conduct und dem Prozess für das Einreichen von Pull Requests.
+Please read our CONTRIBUTING.md for details on our Code of Conduct and the process for submitting Pull Requests.
 
-1. Forke das Projekt
-2. Erstelle deinen Feature Branch (git checkout -b feature/AmazingFeature)
-3. Committe deine Änderungen (git commit -m 'feat: Add some AmazingFeature') - Wir nutzen Conventional Commits!
-4. Pushe in den Branch (git push origin feature/AmazingFeature)
-5. Öffne einen Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'feat: Add some AmazingFeature'`) - We use Conventional Commits!
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### 🛡️ Sicherheit
+### 🛡️ Security
 
-Bitte melde Sicherheitslücken **nicht** in den öffentlichen Issues.
-Sende stattdessen eine E-Mail an [t-boyke@example.com] oder nutze den Security-Tab im Repository.
+Please do **not** report security vulnerabilities in public issues.
+Instead, send an email to [t-boyke@example.com] or use the Security tab in the repository.
 
-### 📄 Lizenz
+### 📄 License
 
-Veröffentlicht unter der MIT Lizenz. Siehe LICENSE für weitere Informationen.
+Published under the MIT License. See LICENSE for more information.
 
-### 📞 Kontakt & Support
+### 📞 Contact & Support
 
-Projekt Maintainer: T-Boyke - t-boyke@example.com
-Projekt Link: https://github.com/T-Boyke/grav-theme-charm
+Project Maintainer: T-Boyke - t-boyke@example.com
+Project Link: https://github.com/T-Boyke/grav-theme-charm
