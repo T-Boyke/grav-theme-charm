@@ -1,251 +1,153 @@
-<a name="readme-top"></a>
+# Quark Theme
 
----
-### 📝 Verwendung dieses Templates
-Nachdem du dieses Template mit dem Button **"Use this template"** erstellt hast, führe folgende Schritte durch:
+![](assets/quark-screenshots.jpg)
 
-1. Suche und ersetze alle Vorkommen von `[REPO_NAME]` mit deinem Projektnamen.
-2. Suche und ersetze `[DEIN_USER]` mit deinem GitHub-Username.
-3. Aktualisiere die `package.json` (Name, Version, Autor).
-4. Bearbeite die `.env.example` passend zu deinem Projekt.
-5. Lösche diesen Abschnitt aus der README.
----
+**Quark** is the new default theme for [Grav CMS](http://github.com/getgrav/grav).  This theme is built with the [Spectre.css](https://picturepan2.github.io/spectre/) framework and provides a powerful base for developing your own themes. Quark uses functionality that is only available in Grav 1.4+, as such you cannot run Quark on earlier versions of Grav.
 
-<br />
-<div align="center">
-  <a href="https://github.com/[DEIN_USER]/[REPO_NAME]">
-    <img src="docs/assets/logo.png" alt="Logo" width="120" height="120">
-  </a>
+## Features
 
-  <h1 align="center">[PROJEKT TITEL]</h1>
+* Lightweight and minimal for optimal performance
+* Spectre CSS Framework
+* Fully responsive with full-page mobile navigation
+* SCSS based CSS source files for easy customization
+* Built-in support for on-page navigation
+* Multiple page template types
+* Fontawesome icon support
 
-  <p align="center">
-    <strong>[Ein prägnanter Slogan oder Einzeiler, der das Projekt beschreibt]</strong>
-    <br />
-    <br />
-    <a href="https://[DEIN_USER].github.io/[REPO_NAME]"><strong>Dokumentation »</strong></a>
-    <br />
-    <br />
-    <a href="#-demo">Live Demo</a>
-    ·
-    <a href="https://github.com/[DEIN_USER]/[REPO_NAME]/issues/new?template=bug_report.md">Bug melden</a>
-    ·
-    <a href="https://github.com/[DEIN_USER]/[REPO_NAME]/issues/new?template=feature_request.md">Feature anfragen</a>
-  </p>
-</div>
+### Supported Page Templates
 
-<div align="center">
+* Default view template `default.md`
+* Error view template `error.md`
+* Blog view template `blog.md`
+* Blog item view template `item.md`
+* Modular view templates: `modular.md`
+  * Features Modular view template `features.md`
+  * Hero Modular view template `hero.md`
+  * Text Modular view template `text.md`
+  * Note: Gallery Modular view template `gallery.md` only works in concert with premium plugin [Lightbox Gallery](https://getgrav.org/premium/lightbox-gallery/docs)
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/[DEIN_USER]/[REPO_NAME])](https://github.com/[DEIN_USER]/[REPO_NAME]/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/[DEIN_USER]/[REPO_NAME])](https://github.com/[DEIN_USER]/[REPO_NAME]/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![CI Build](https://github.com/[DEIN_USER]/[REPO_NAME]/actions/workflows/ci.yml/badge.svg)](https://github.com/[DEIN_USER]/[REPO_NAME]/actions)
+# Installation
 
-</div>
+Installing the Quark theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. 
 
----
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Quark theme can be found in both the [One-page](https://github.com/getgrav/grav-skeleton-onepage-site) and [Blog Site](https://github.com/getgrav/grav-skeleton-blog-site) which are self-contained repositories for a complete sites which include: sample content, configuration, theme, and plugins.
 
-<details>
-  <summary><strong>📖 Inhaltsverzeichnis</strong> (Klicken zum Ausklappen)</summary>
-  <ol>
-    <li>
-      <a href="#-über-das-projekt">Über das Projekt</a>
-      <ul>
-        <li><a href="#-technologie-stack">Technologie Stack</a></li>
-        <li><a href="#-projektstruktur">Projektstruktur</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#-getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#voraussetzungen">Voraussetzungen</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#umgebungsvariablen">Umgebungsvariablen</a></li>
-      </ul>
-    </li>
-    <li><a href="#-nutzung">Nutzung</a></li>
-    <li><a href="#-entwicklung--commands">Entwicklung & Commands</a></li>
-    <li><a href="#-testing--qualitätssicherung">Testing</a></li>
-    <li><a href="#-roadmap">Roadmap</a></li>
-    <li><a href="#-mitwirken">Mitwirken</a></li>
-    <li><a href="#-lizenz">Lizenz</a></li>
-    <li><a href="#-kontakt--support">Kontakt</a></li>
-  </ol>
-</details>
+## GPM Installation (Preferred)
 
----
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
-## 💡 Über das Projekt
+    bin/gpm install quark
 
-[![Produkt Screenshot](docs/assets/screenshot.png)](https://[deine-demo-url].com)
+This will install the Quark theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/quark`.
 
-[Hier kommt der ausführliche Elevator-Pitch hin. Beschreibe das Problem, das dieses Projekt löst. Warum hast du es gebaut? Was unterscheidet es von existierenden Lösungen? Halte diesen Teil inspirierend.]
+## Manual Installation
 
-**Hauptfunktionen:**
-* ✅ **[Feature 1]:** [Kurze Beschreibung, z.B. Echtzeit-Synchronisation]
-* ✅ **[Feature 2]:** [Kurze Beschreibung, z.B. Offline-Support]
-* ✅ **[Feature 3]:** [Kurze Beschreibung, z.B. Modulare Architektur]
-* ✅ **[Feature 4]:** [Kurze Beschreibung, z.B. Barrierefreiheit nach WCAG]
+To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `quark`. You can find these files either on [GitHub](https://github.com/getgrav/grav-theme-quark) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+You should now have all the theme files under
 
-### 🛠 Technologie Stack
+    /your/site/grav/user/themes/quark
 
-Dieses Projekt setzt auf moderne, robuste Technologien:
+## Default Options
 
-| Komponente | Technologie | Beschreibung / Version |
-| :--- | :--- | :--- |
-| **Core** | [z.B. Angular] | [Frontend Framework (v17+)] |
-| **Language** | [z.B. TypeScript] | [Strict Typing für Skalierbarkeit] |
-| **Styling** | [z.B. Tailwind CSS] | [Utility-First CSS Framework] |
-| **State** | [z.B. Signals / NgRx] | [Reaktives State Management] |
-| **Build** | [z.B. Vite / Esbuild] | [High-Performance Bundler] |
-| **CI/CD** | GitHub Actions | Automatisierte Tests & Deployments |
+Quark comes with a few default options that can be set site-wide.  These options are:
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
-
-### 📂 Projektstruktur
-
-Ein Überblick über die wichtigsten Verzeichnisse und Dateien:
-
-```text
-[REPO_NAME]/
-├── .github/                 # GitHub Templates, Actions & Dependabot Config
-├── docs/                    # Dokumentation & Assets
-├── src/                     # Quellcode der Anwendung
-│   ├── app/                 # Hauptlogik / Komponenten
-│   ├── assets/              # Statische Dateien (Bilder, Fonts)
-│   └── environments/        # Umgebungskonfigurationen
-├── tests/                   # Test-Dateien (Unit & E2E)
-├── .editorconfig            # Coding Style Definitionen
-├── .gitignore               # Ignorierte Git-Dateien
-├── Makefile                 # Shortcut-Befehle für Entwicklung
-├── CHANGELOG.md             # Versionshistorie
-└── README.md                # Projektbeschreibung
-```
-### 🚀 Getting Started
-Folge diesen Schritten, um eine lokale Kopie des Projekts zum Laufen zu bringen.
-
-**Voraussetzungen:**
-
-Stelle sicher, dass folgende Tools auf deinem System installiert sind:
-- **Git** (Download)
-- **[Laufzeitumgebung, z.B. Node.js]** (v20.x oder höher empfohlen)
-- **[Paketmanager, z.B. npm]** (v10.x oder höher)
-
-```Bash
-npm install npm@latest -g
+```yaml
+enabled: true                 # Enable the theme
+production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
+grid-size: grid-lg            # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
+header-fixed: true            # Cause the header to be fixed at the top of the browser
+header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
+header-dark: false            # Inverts the text/logo to work better on dark backgrounds
+header-transparent: false     # Allows the fixed header to be transparent over the page
+sticky-footer: true           # Causes the footer to be sticky at the bottom of the page
+blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout with sidebar
+custom_logo:                  # A custom logo rather than the default (see below)  
+custom_logo_mobile:           # A custom logo to use for mobile navigation
 ```
 
-**Installation**
-1. **Repository klonen**
-```Bash
-git clone [https://github.com/](https://github.com/)[DEIN_USER]/[REPO_NAME].git
-cd [REPO_NAME]
-```
-2. **Abhängigkeiten installieren** Wir nutzen ein Makefile zur Vereinfachung (siehe unten), oder Standard-Befehle:
-```Bash
-make install
-# Alternativ: npm install / pip install -r requirements.txt
-```
-**Umgebungsvariablen** 
-1. Kopiere die Beispiel-Konfiguration:
-```Bash
-cp .env.example .env
-```
-2. Trage deine API-Schlüssel und Konfigurationen in die .env Datei ein.
+To make modifications, you can copy the `user/themes/quark/quark.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
-⚠️ Wichtig: Die .env Datei wird von Git ignoriert und darf niemals commitet werden!
+> NOTE: Do not modify the `user/themes/quark/quark.yaml` file directly or your changes will be lost with any updates
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+## Custom Logos
 
-### 💻 Entwicklung & Commands
+To add a custom logo, you should put the log into the `user/themes/quark/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
 
-Dieses Projekt nutzt ein Makefile, um häufige Befehle zu standardisieren. Hier sind die wichtigsten Commands:
-
-| Befehl | Beschreibung | Äquivalent |
-| :--- | :--- | :--- |
-| `make help` | Zeigt alle verfügbaren Befehle an | - |
-| `make install` | Installiert alle Abhängigkeiten | `npm install` |
-| `make dev` | Startet den lokalen Dev-Server | `npm start` |
-| `make test` | Führt die Test-Suite aus | `npm test` |
-| `make build` | Erstellt einen Production-Build | `npm run build` |
-| `make clean` | Löscht temporäre Ordner (dist, coverage) | `rm -rf ...` |
-
-Manueller Start (ohne Make):
-```Bash
-npm start
-# Server läuft unter http://localhost:4200
+```yaml
+custom_logo:
+    - name: 'my-logo.png'
+custom_logo_mobile:
+    - name: 'my-mobile-logo.png'    
 ```
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Quark theme options.
 
-### 🧪 Testing & Qualitätssicherung
+## Page Overrides
 
-Wir legen großen Wert auf Code-Qualität.
-**Unit Tests**
-Führen Sie die Unit-Tests aus, um die Logik einzelner Komponenten zu prüfen.
-```Bash
-make test
+Quark has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page.  The theme will merge the combination of the defaults with any `body_classes` set. For example:
+
+```yaml
+body_classes: "header-dark header-transparent"
 ```
-**Linting & Formatting**
-Wir nutzen [ESLint/Prettier/Ruff], um Code-Konsistenz zu gewährleisten.
-```Bash
-npm run lint
+
+On a particular page will ensure that page has those options enabled (assuming they are false by default).
+
+## Hero Options
+
+The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
+
+```yaml
+hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
+hero_image: road.jpg
+hero_align: center
 ```
-**CI/CD Pipeline**
-Jeder Push auf main oder Pull Request durchläuft automatisch unsere GitHub Actions Pipeline:
-1. **Build:** Prüft, ob der Code kompiliert.
-2. **Test:** Führt alle Unit-Tests aus.
-3. **Audit:** Prüft Abhängigkeiten auf Sicherheitslücken (via Dependabot).
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
 
-### 🗺 Roadmap
+* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
+* `title-h1h2` - Enforced a close matched h1/h2 title pairing
+* `parallax` - Enables a CSS-powered parallax effect
+* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
+* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
+* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
+* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
+* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
 
-Hier ist der aktuelle Plan für zukünftige Features:
+The `hero_image` should point to an image file in the current page folder.
 
-- [x] Initiales Setup & Architektur
-- [x] CI/CD Pipeline Integration
-- [ ] [Feature A]: Implementierung von [Details]
-- [ ] [Feature B]: Mehrsprachigkeit (i18n)
-- [ ] [Feature C]: Dark Mode Support
+## Features Modular Options
 
-Siehe die offenen Issues für eine vollständige Liste.
+The features modular template provides the ability to set a class on the features, as well as an array of feature items.  For example:
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+```yaml
+class: offset-box
+features:
+    - header: Crazy Fast
+      text: "Performance is not just an afterthought, we baked it in from the start!"
+      icon: fighter-jet
+    - header: Easy to build
+      text: "Simple text files means Grav is trivial to install, and easy to maintain"
+      icon: database
+    - header: Awesome Technology
+      text: "Grav employs best-in-class technologies such as Twig, Markdown &amp; Yaml"
+      icon: cubes
+    - header: Super Flexible
+      text: "From the ground up, with many plugin hooks, Grav is extremely extensible"
+      icon: object-ungroup
+    - header: Abundant Plugins
+      text: "A vibrant developer community means over 200 themes available to download"
+      icon: puzzle-piece
+    - header: Free / Open Source
+      text: "Grav is an open source project, so you can spend your money on other stuff"
+      icon: money 
+```
 
-### 🤝 Mitwirken
-Beiträge sind das Herz der Open-Source-Community. Wir freuen uns über jeden Pull Request!
+## Text Modular Options
 
-Bitte lies unsere CONTRIBUTING.md für Details zu unserem Code of Conduct und dem Prozess für das Einreichen von Pull Requests.
-1. Forke das Projekt
-2. Erstelle deinen Feature Branch (git checkout -b feature/AmazingFeature)
-3. Committe deine Änderungen (git commit -m 'feat: Add some AmazingFeature') - Wir nutzen Conventional Commits!
-4. Pushe in den Branch (git push origin feature/AmazingFeature)
-5. Öffne einen Pull Request
+The text box provides a single option to control if any image found in the page folder should be left or right aligned:
 
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
+```yaml
+image_align: right
+```
 
-### 🛡️ Sicherheit
-
-Bitte melde Sicherheitslücken **nicht** in den öffentlichen Issues.
-Sende stattdessen eine E-Mail an [deine-email@example.com] oder nutze den Security-Tab im Repository.
-
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
-
-### 📄 Lizenz
-Veröffentlicht unter der MIT Lizenz. Siehe LICENSE für weitere Informationen.
-
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
-
-### 📞 Kontakt & Support
-Projekt Maintainer: [Dein Name] - [verdächtiger Link entfernt]
-Projekt Link: https://github.com/[DEIN_USER]/[REPO_NAME]
-
-<br />
-
-<div align="center"><h3>Gefällt dir das Projekt?</h3><a href="https://www.buymeacoffee.com/[DEIN_USER]"><img src="https://www.google.com/search?q=https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="180"></a></div>
-
-<p align="right">(<a href="#readme-top">zurück nach oben</a>)</p>
