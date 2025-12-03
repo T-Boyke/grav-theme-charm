@@ -56,4 +56,59 @@ jQuery(document).ready(function($){
     // Tree Menu
     $(".tree").treemenu({delay:300});
 
+    // Theme Switcher
+    const themeRadios = document.querySelectorAll('input[name="theme"]');
+    const html = document.documentElement;
+
+    // Function to set theme
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else if (theme === 'light') {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.removeItem('theme');
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+        
+        // Update radio buttons
+        themeRadios.forEach(radio => {
+            if (radio.value === theme) {
+                radio.checked = true;
+            }
+        });
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        setTheme('system');
+    }
+
+    // Listen for changes
+    themeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            setTheme(e.target.value);
+        });
+    });
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+    });
+
 });
