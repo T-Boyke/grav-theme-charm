@@ -18,14 +18,14 @@
 {% endblock head %}
 
 {% block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/charm.css') %}
+    {% do assets.addCss('theme://dist/charm.css') %}
     {% do assets.addCss('theme://css/custom.css') %}
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 101) %}
     {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://dist/site.js', {group:'bottom', type:'module'}) %}
 {% endblock %}
 
 {% block assets deferred %}

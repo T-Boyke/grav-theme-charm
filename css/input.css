@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./tailwind/tailwind.css";
 @import "./theme/typography.css";
