@@ -1,13 +1,13 @@
 {% macro nav_loop(page) %}
   {% import _self as macros %}
   {% for p in page.children.visible %}
-    {% set active_page = (p.active or p.activeChild) ? 'text-blue-600 font-bold' : 'text-gray-700 hover:text-blue-600' %}
+    {% set active_page = (p.active or p.activeChild) ? 'text-blue-600 dark:text-blue-400 font-bold' : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400' %}
     <li class="relative group">
       <a href="{{ p.url }}" class="{{ active_page }} block px-3 py-2 rounded transition-colors">
         {{ p.menu }}
       </a>
       {% if p.children.visible.count > 0 %}
-      <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded hidden group-hover:block z-50">
+      <ul class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block z-50 border dark:border-gray-700">
         {{ macros.nav_loop(p) }}
       </ul>
       {% endif %}
