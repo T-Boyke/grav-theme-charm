@@ -24,14 +24,38 @@ jQuery(document).ready(function ($) {
         $(element).parent('pre').replaceWith(mermaidDiv);
     });
 
-    mermaid.initialize({
-        startOnLoad: true,
-        theme: 'base',
-        themeVariables: {
-            fontFamily: 'inherit',
-            darkMode: $('html').hasClass('dark') // Initial check
-        }
-    });
+    try {
+        var isDark = $('html').hasClass('dark');
+        var themeVars = isDark ? {
+            // Dark Mode Overrides
+            primaryColor: '#1f2937', // gray-800
+            primaryTextColor: '#f3f4f6', // gray-100
+            primaryBorderColor: '#6b7280', // gray-500
+            lineColor: '#a5b4fc', // indigo-300
+            secondaryColor: '#374151', // gray-700
+            tertiaryColor: '#1f2937', // gray-800
+            noteBkgColor: '#374151',
+            noteTextColor: '#f3f4f6',
+            textColor: '#f3f4f6',
+            mainBkg: '#1f2937',
+            darkMode: true
+        } : {
+            // Light Mode Defaults
+            darkMode: false
+        };
+
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                fontFamily: 'inherit',
+                ...themeVars
+            }
+        });
+        console.log('Mermaid initialized with dark mode:', isDark);
+    } catch (e) {
+        console.error('Mermaid init failed:', e);
+    }
 
     scrollHeader();
 
