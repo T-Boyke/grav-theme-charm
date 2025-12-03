@@ -11,7 +11,7 @@
 - Fully responsive with full-page mobile navigation
 - Built-in support for on-page navigation
 - Multiple page template types
-- Fontawesome icon support
+- **Fontawesome v7.1.0** icon support
 
 ### Supported Page Templates
 
