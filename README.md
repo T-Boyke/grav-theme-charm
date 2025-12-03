@@ -10,6 +10,7 @@
 - **Vite** Build System for lightning-fast HMR and optimized builds
 - **Spectre.css Port**: Full port of Spectre.css components to Tailwind CSS using BEM methodology
 - **Dark Mode**: Native Dark Mode support with system preference detection and manual toggle
+- **Mermaid.js Integration**: Native support for Mermaid diagrams with automatic dark mode adaptation
 - **Fontawesome v7.1.0** icon support
 - Fully responsive with full-page mobile navigation
 - Built-in support for on-page navigation
@@ -149,6 +150,20 @@ The text box provides a single option to control if any image found in the page 
 ```yaml
 image_align: right
 ```
+
+## Mermaid Diagrams
+
+Charm includes built-in support for [Mermaid.js](https://mermaid.js.org/) diagrams. Simply use the standard code block syntax with the language identifier `mermaid`:
+
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+
+The theme automatically handles rendering and adapts the diagram colors for both light and dark modes.
 
 ### 💻 Development & Commands
 
