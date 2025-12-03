@@ -7,6 +7,9 @@
             {% if image %}
             <div class="column col-6 col-md-12">
                 {{ content|raw }}
+                {% if page.header.button %}
+                    <a href="{{ page.header.button.url }}" class="btn btn-primary"><i class="fa-solid fa-{{ page.header.button.icon }}"></i> {{ page.header.button.text }}</a>
+                {% endif %}
             </div>
             <div class="column col-6 col-md-12">
                 {{ image.html|raw }}

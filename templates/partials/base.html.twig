@@ -20,7 +20,6 @@
 {% block stylesheets %}
     {% do assets.addCss('theme://css-compiled/charm.css') %}
     {% do assets.addCss('theme://css/custom.css') %}
-    {% do assets.addCss('theme://css/line-awesome.min.css') %}
 {% endblock %}
 
 {% block javascripts %}
@@ -52,7 +51,7 @@
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper ml-4"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
+                            <span class="login-status-wrapper ml-4"><i class="fa-solid fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
                         {% endif %}
 
                     </div>

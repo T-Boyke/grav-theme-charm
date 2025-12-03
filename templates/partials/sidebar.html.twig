@@ -15,7 +15,9 @@
 {% if config.plugins.random.enabled %}
 <div class="sidebar-content mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
 	<h4 class="text-lg font-bold mb-4 border-b pb-2">{{ 'THEME_CHARM.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
-	<a class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> {{ 'THEME_CHARM.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
+	        <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full block text-center mb-2" href="http://getgrav.org">
+            <i class="fa-solid fa-arrow-circle-down mr-2"></i> {{ 'THEME_CHARM.SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}
+        </a>
 </div>
 {% endif %}
 
@@ -36,8 +38,8 @@
 {% if config.plugins.feed.enabled %}
 <div class="sidebar-content syndicate mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
     <h4 class="text-lg font-bold mb-4 border-b pb-2">{{ 'THEME_CHARM.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-    <a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mr-2 mb-2" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-    <a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mr-2 mb-2" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
-    {% if config.plugins.feed.enable_json_feed %}<a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mb-2" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
+    <a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mr-2 mb-2" href="{{ feed_url }}.atom"><i class="fa-solid fa-rss-square"></i> Atom 1.0</a>
+    <a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mr-2 mb-2" href="{{ feed_url }}.rss"><i class="fa-solid fa-rss-square"></i> RSS</a>
+    {% if config.plugins.feed.enable_json_feed %}<a class="inline-block px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors mb-2" href="{{ feed_url }}.json"><i class="fa-solid fa-rss-square"></i> JSON</a>{% endif %}
 </div>
 {% endif %}

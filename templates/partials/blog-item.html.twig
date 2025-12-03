@@ -21,10 +21,10 @@
 
 <p class="prev-next flex justify-between mt-8 text-center">
     {% if not page.isLast %}
-            <a class="inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors" href="{{ page.prevSibling.url }}"><i class="fa fa-angle-left"></i> {{ 'THEME_CHARM.BLOG.ITEM.PREV_POST'|t }}</a>
+            <a class="inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors" href="{{ page.prevSibling.url }}"><i class="fa-solid fa-angle-left"></i> {{ 'THEME_CHARM.BLOG.ITEM.PREV_POST'|t }}</a>
     {% endif %}
 
     {% if not page.isFirst %}
-        <a class="inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition-colors" href="{{ page.nextSibling.url }}">{{ 'THEME_CHARM.BLOG.ITEM.NEXT_POST'|t }} <i class="fa fa-angle-right"></i></a>
+        <a class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-100 transition duration-300" href="{{ page.url }}">{{ 'THEME_CHARM.BLOG.ITEM.CONTINUE_READING'|t }} <i class="fa-solid fa-angle-right"></i></a>
     {% endif %}
 </p>

@@ -34,7 +34,7 @@
         {% for mitem in site.menu %}
             <li>
                 <a {% if mitem.class %}class="{{ mitem.class }} text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors"{% endif %} href="{{ mitem.url }}">
-                    {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                    {% if mitem.icon %}<i class="fa-solid fa-{{ mitem.icon }}"></i>{% endif %}
                     {{ mitem.text }}
                 </a>
             </li>
