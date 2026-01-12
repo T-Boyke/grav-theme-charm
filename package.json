@@ -30,7 +30,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "tailwindcss": "^4.1.17",
-    "vite": "^7.2.7"
+    "vite": "^7.3.1"
   },
   "browserslist": [
     "last 4 Chrome versions",
